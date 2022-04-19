@@ -37,12 +37,13 @@ export default props => {
   }, []);
 
   const search = useCallback(() => {
-    getChartData({ startTime, endTime, name });
-  }, [startTime, endTime, name]);
+    getChartData();
+  }, []);
 
+  // 初始化
   useEffect(() => {
-    getChartData({ startTime, endTime, name });
-  }, [startTime, endTime, name]);
+    getChartData();
+  }, []);
 
   return (
     <>
@@ -62,7 +63,7 @@ export default props => {
               </Col>
               <Col>
                 <div style={{ padding: "10px" }}>
-                  <Button type="primary" icon={<SearchOutlined />}>
+                  <Button type="primary" icon={<SearchOutlined />} onClick={search}>
                     Search
                   </Button>
                 </div>
