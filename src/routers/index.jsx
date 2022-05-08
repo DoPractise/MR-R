@@ -5,6 +5,7 @@ import loadable from "./../utils/loadable";
 const Home = loadable(() => import(/* webpackChunkName: 'home' */ "./../pages/home"));
 const About = loadable(() => import(/* webpackChunkName: 'about' */ "./../pages/about"));
 const HotInfo = loadable(() => import(/* webpackChunkName: 'hot-info' */ "./../pages/hot-info"));
+const Chart = loadable(() => import(/* webpackChunkName: 'hot-info' */ "./../pages/chart"));
 
 export default () => {
   return (
@@ -14,6 +15,7 @@ export default () => {
         <Route path="/index" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/hot-info" component={HotInfo} />
+        <Route path="/chart" component={Chart} />
       </Switch>
     </Router>
   );
